@@ -17,6 +17,7 @@ function generateMarker(){
         //console.log(loc);
         var marker_c = L.marker([latM_c,lngM_c]);
         var popup_c = marker_c.bindPopup(loc).openPopup();
+
         marker_c.addTo(map);
     
         const latM_o = entry.geometry.coordinates[0][1];
@@ -33,8 +34,9 @@ generateMarker();
 
 function generateList() {
     const ul = document.querySelector('.list');
+    const cityset = new Set();
     demolist.forEach((entry) => {
-      //console.log(entry.properties);
+      /console.log(entry.properties);/
       const li = document.createElement('li');
       const div = document.createElement('div');
       const a = document.createElement('a');
@@ -74,11 +76,20 @@ function generateList() {
       div.appendChild(a);
       div.appendChild(p);
       div.appendChild(ori);
+      cityset.add(entry.properties.origin);
       div.appendChild(draw);
       div.appendChild(col_loc);
       div.appendChild(full);
       li.appendChild(div);
       ul.appendChild(li);
+
+    });
+    console.log(cityset);
+    const dropdown = document.getElementById('citiesDropdown');
+    cityset.forEach((city)=>{
+      const option = document.createElement('option');
+      option.innerText = city;
+      dropdown.appendChild(option);
     });
   }
 
@@ -98,7 +109,7 @@ function generateList() {
     for (i = 0; i < li.length; i++) { // `for...of` loops through the NodeList
       city = li[i].getElementsByTagName("h8")[0];
       //console.log(city);
-      // if the filter is set to 'All', or this is the header row, or 2nd `td` text matches filter
+      // if the filter is set to 'All', or this is the header row, or text matches filter
       if (filter === "All" || !city || (filter === city.textContent)) {
         li[i].style.display = ""; // shows this row
       }
@@ -108,6 +119,29 @@ function generateList() {
     }
   }
   
+  function filterMarker() {
+    // Variables
+    let dropdown, ul, li, city, filter;
+    dropdown = document.getElementById("citiesDropdown");
+    ul = document.querySelector('.list');
+    li = ul.getElementsByTagName("li");
+    filter = dropdown.value;
+    //console.log(li);
+    //console.log('filter:' + filter);
+  
+    // Loops through rows and hides those with countries that don't match the filter
+    for (i = 0; i < li.length; i++) { // `for...of` loops through the NodeList
+      city = li[i].getElementsByTagName("h8")[0];
+      //console.log(city);
+      // if the filter is set to 'All', or this is the header row, or text matches filter
+      if (filter === "All" || !city || (filter === city.textContent)) {
+        li[i].style.display = ""; // shows this row
+      }
+      else {
+        li[i].style.display = "none"; // hides this row
+      }
+    }
+  }
 
 function makePopupContent(entry) {
   console.log(entry.properties);
@@ -115,7 +149,7 @@ function makePopupContent(entry) {
     if(entry.properties.date !== null){
         date = "(" + entry.properties.date +")";
     }
-    activities = "No details";
+    activities = "See full entry";
     if(entry.properties.activities !== null){
       activities = "";
       entry.properties.activities.forEach((a) =>{
