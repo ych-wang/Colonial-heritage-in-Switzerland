@@ -1,6 +1,6 @@
-«Le Conquérant»  
+«Le Conquérant»
 
-«Enigheid»  
+«Enigheid»
 
 «La Vigilante» (Bordeaux => Gold Coast => Cap Français, 250/208 slaves)
 
@@ -18,11 +18,13 @@
 
 «Anaz» (1791, Marseille => Moçambique, left home port, then no further information)
 
-«Prince Manuel», which carried out a slaving voyage from La Rochelle via West Central Africa to Cap Français (233 slaves embarked, 212 arrived)
+«Prince Manuel», which carried out a slaving voyage from La Rochelle via West Central Africa to Cap Français (233 /212)
 
 «Belle Pauline» (1783/84, Weis as owner, La Rochelle => Malembo => Cap Français, 624/568 slaves)
 
-«Suzanne», «Treize-Cantons» (1784, Weis as owner, La Rochelle => Loango => Port-au-Prince, 548/499 slaves; 1786/87, La Rochelle => Porto Novo => Cap Français, 332/283 slaves)
+«Treize-Cantons» (1784, Weis as owner, La Rochelle => Loango => Port-au-Prince, 548/499 slaves)
+
+«Treize-Cantons» (1786/87, La Rochelle => Porto Novo => Cap Français, 332/283 slaves)
 
 «Jolie Henriette de Ribeaucourt» (1784, Trieste => Ile de France => Moçambique => Cap Français, 368/267 slaves) 
 
@@ -32,9 +34,13 @@
 
 «Nouvel-Achille» (1783/84, Weis as owner, La Rochelle => Gold Coast => Sao Tome => Cap Français, 414/355 slaves) 
 
-«Rochelais», «Réparateur» (1786/87, Weis as owner, La Rochelle => Porto Novo => Sao Tome => Port-au-Prince, 411/410 slaves; 1787/89, Weis as owner, La Rochelle => Porto Novo => Port-au-Prince, 514/512 slaves; 1790/91, Weis as owner, La Rochelle => Gold Coast => Port-au-Prince, 420/360 slaves)
+«Réparateur» (1786/87, Weis as owner, La Rochelle => Porto Novo => Sao Tome => Port-au-Prince, 411/410 slaves; 
 
-«Ville de Basle» (1786/87, Weis as owner, La Rochelle => Porto Novo => Port-au-Prince, 270/236 slaves).
+«Réparateur» (1787/89, Weis as owner, La Rochelle => Porto Novo => Port-au-Prince, 514/512 slaves)
+
+«Réparateur» (1790/91, Weis as owner, La Rochelle => Gold Coast => Port-au-Prince, 420/360 slaves)
+
+«Ville de Basle» (1786/87, Weis as owner, La Rochelle => Porto Novo => Port-au-Prince, 270/236 slaves)
 
 «Madame» (Nantes => Moçambique => Cape of Good Hope => Port-au-Prince, 586/405)
 
@@ -50,9 +56,17 @@
 
 «Affriquain» (1783/84, Nantes => West Central Africa => St.Helena => Cabinda => Cap Français, 530/428 slaves)
 
-«Georges» (1788, Nantes => West Central Africa => St.Helena => Les Cayes, 608/553 slaves; 1789/90, Nantes => West Central Africa => St.Helena => Malembo => Cap Français, 484/440 slaves; 1792, Nantes => West Central Africa => St.Helena => Les Cayes, 440/400 slaves) 
+«Georges» (1788, Nantes => West Central Africa => St.Helena => Les Cayes, 608/553 slaves)
 
-«Georgette» (1788/89, Nantes => Congo River => Les Cayes, 377/343 slaves; 1790, Nantes => West Central Africa => St. Helena => Cap Français, 305/278 slaves; 1791/1792, Nantes => West Central Africa => St. Helena => Malembo => Congo River => Saint-Marc, 336/306 slaves)
+«Georges» (1789/90, Nantes => West Central Africa => St.Helena => Malembo => Cap Français, 484/440 slaves)
+
+«Georges»  (1792, Nantes => West Central Africa => St.Helena => Les Cayes, 440/400 slaves) 
+
+«Georgette» (1788/89, Nantes => Congo River => Les Cayes, 377/343 slaves)
+
+«Georgette» (1790, Nantes => West Central Africa => St. Helena => Cap Français, 305/278 slaves)
+
+«Georgette»  (1791/1792, Nantes => West Central Africa => St. Helena => Malembo => Congo River => Saint-Marc, 336/306 slaves)
 
 «Espiège» (1790/91, Nantes => Gabon => Cap Français => Port-au-Prince, 37/28 slaves)
 
@@ -64,13 +78,17 @@
 
 «Le Saint-Clément» (1784, Rochefort => Gold Coast => Cap Français, 175/150 slaves)
 
-«L’Adèle», which in 1787/88 sailed from Le Havre via Cabinda to Port-au-Prince (299/272 slaves) and in 1789/90 from Le Havre via West Central Africa, St. Helena, and Loango to Cap Français (440/400)
+«L’Adèle», （1787/88, Le Havre => Cabinda => Port-au-Prince (299/272 slaves)
+
+«L’Adèle» (1789/90, Le Havre => West Central Africa => St. Helena => Loango => Cap Français (440/400)
 
 «Conquérant» (1790, Le Havre => West Central Africa => St. Helena => Malembo => Rio Dande => Cap Français, 462/420)
 
 «Duc d’Orléan» (1789/90, Nantes => West Central Africa => St. Helena => Léogâne, 332/302 slaves; 1791/92, Nantes => West Central Africa => St. Helena => Léogâne, 249/227)
 
-«Superbe» (1790/91, , Nantes => West Central Africa => St. Helena => Cap Français, 523/476 slaves), «Uranie» (1790/91, Nantes => Cabinda => Saint-Marc, 638/600 slaves)
+«Superbe» (1790/91, Nantes => West Central Africa => St. Helena => Cap Français, 523/476 slaves) 
+
+«Uranie» (1790/91, Nantes => Cabinda => Saint-Marc, 638/600 slaves)
 
 «Roi d’Ardres» (1791/1792, Nantes => Lagos => Prince Island => Port-au-Prince, 225/192)
 
@@ -80,7 +98,7 @@
 
 «Le Saturne» (1787/88, Nantes => Bight of Benin => Ouidah => Lagos => Saint-Marc, 353/320 slaves)
 
-«Bonne Sophie» (1783/84, Honfleur => Malembo => Cap Français, 499/482 slaves)
+«Bonne Sophie» (1783/84, Honfleur => Malembo => Cap Français, 499/482)
 
 «Petit Mathurin» (1787/1789, Nantes => West Central Africa => St. Helena => Port-au-Prince, 176/160 slaves)
 
@@ -92,11 +110,11 @@
 
 «Neptune» (1791, La Rochelle => West Central Africa => St. Helena => Cap Français, 386/351 slaves)
 
-«Georgette» (1788/89, Nantes => Congo River => Les Cayes, 377/343 slaves; 1791/1792, Nantes => West Central Africa => St. Helena => Malembo => Congo River => Saint-Marc, 336/306 slaves)
+«Necker» (1789/90, Nantes => West Central Africa => St.Helena => Port-au-Prince, 443/403 slaves; 
 
-«Réparateur» (1790/91, La Rochelle => Gold Coast => Port-au-Prince, 420/360 slaves)
+«Necker» (1790, Bordeaux => Saint Louis => Port-au-Prince, 169/150 slaves)
 
-«Necker» (1789/90, Nantes => West Central Africa => St.Helena => Port-au-Prince, 443/403 slaves; 1790, Bordeaux => Saint Louis => Port-au-Prince, 169/150 slaves; 1790/1791, Le Havre => Moçambique => port-au-Prince, 550/380 slaves)
+«Necker» (1790/1791, Le Havre => Moçambique => port-au-Prince, 550/380 slaves)
 
 «Maréchal de Mouchy» (1783, Bodeaux => West Central Africa => St. Helena => Ile de France => Rio Dande => Cap Français, 960/810 slaves)
 
@@ -136,7 +154,11 @@
 
 «Lottery», which in 1765/66 sailed from London to Grenada via the Windward Coast, Cape Mount and Bassa with 211/172 slaves
 
-«Comte de Tréville», which three times transported slaves to Haiti: 1784/85, Nantes => Bight of Benin => Ouidah => Lagos => Princes Island => Saint-Marc, 367/313 slaves; 1786/87, Nantes => Port Novo => Princes Island => Saint-Marc, 411/350 slaves; 1789/90, Nantes => Port Novo => Princes Island => Léogâne (546/465 slaves)
+«Comte de Tréville» (1784/85, Nantes => Bight of Benin => Ouidah => Lagos => Princes Island => Saint-Marc, 367/313 slaves) 
+
+«Comte de Tréville» (1786/87, Nantes => Port Novo => Princes Island => Saint-Marc, 411/350 slaves)
+
+«Comte de Tréville» (1789/90, Nantes => Port Novo => Princes Island => Léogâne, 546/465 slaves)
 
 «Conquérant» (1790, Le Havre => West Central Africa => St. Helena => Malembo => Rio Dande => Cap Français, 462/420)
 
