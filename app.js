@@ -11,16 +11,16 @@ Esri_WorldStreetMap.addTo(map);
 
 function generateMarker(){
     demolist.forEach((entry) => {
-        const latM_c = entry.geometry.coordinates[0][1];
-        const lngM_c = entry.geometry.coordinates[0][0];
-        const loc = entry.properties.col_loc;
+        const latM_c = entry.geometry.coordinates[1][1];
+        const lngM_c = entry.geometry.coordinates[1][0];
+        const loc = entry.properties.colonial_location;
         //console.log(loc);
         var marker_c = L.marker([latM_c,lngM_c]);
         var popup_c = marker_c.bindPopup(loc).openPopup();
         marker_c.addTo(map);
     
-        const latM_o = entry.geometry.coordinates[1][1];
-        const lngM_o = entry.geometry.coordinates[1][0];
+        const latM_o = entry.geometry.coordinates[0][1];
+        const lngM_o = entry.geometry.coordinates[0][0];
         const ori = entry.properties.origin;
         //console.log(ori);
         var marker_o = L.marker([latM_o,lngM_o]);
@@ -34,6 +34,7 @@ generateMarker();
 function generateList() {
     const ul = document.querySelector('.list');
     demolist.forEach((entry) => {
+      //console.log(entry.properties);
       const li = document.createElement('li');
       const div = document.createElement('div');
       const a = document.createElement('a');
@@ -42,16 +43,23 @@ function generateList() {
       const col_loc = document.createElement('h8');
       const draw = document.createElement('button');
       const full = document.createElement('p');
-      a.addEventListener('click', () => {
-          flyToCol(entry);
+      col_loc.addEventListener('click', () => {
+        const opt = "col";
+          flyTo(entry,opt);
+      });
+      ori.addEventListener('click', () => {
+        const opt = "ori";
+        flyTo(entry, opt);
+    });
+    a.addEventListener('click', () => {
+      drawLine(entry);
       });
       draw.addEventListener('click', () => {
-          console.log('click button')
         drawLine(entry);
         });
       div.classList.add('entry-item');
       date = "";
-      if(entry.properties.date != "none"){
+      if(entry.properties.date !== null){
         date = "("+ entry.properties.date +")";
       }
       a.innerText = entry.properties.person + ' ' + date;
@@ -59,7 +67,7 @@ function generateList() {
       p.innerText = "";
       ori.innerText = entry.properties.origin;
      //ori.setAttribute('id', 'city');
-      col_loc.innerText = entry.properties.col_loc;
+      col_loc.innerText = entry.properties.colonial_location;
       draw.innerText = "➠";
       full.innerText = entry.properties.full_entry;
   
@@ -102,24 +110,40 @@ function generateList() {
   
 
 function makePopupContent(entry) {
+  console.log(entry.properties);
     date = "";
-    if(entry.properties.date != "none"){
-        date = "(" + entry.properties.date +")"
+    if(entry.properties.date !== null){
+        date = "(" + entry.properties.date +")";
     }
+    activities = "No details";
+    if(entry.properties.activities !== null){
+      activities = "";
+      entry.properties.activities.forEach((a) =>{
+          activities += a + ', ';
+      });}
     return `
       <div>
           <h5>${entry.properties.person}${date}</h5>
           <p>Origin: ${entry.properties.origin}</p>
-          <p>Activities: ${entry.properties.activites}</p>
+          <p>Colonial Location: ${entry.properties.colonial_location}</p>
+          <p>Activities: ${activities}</p>
       </div>
     `;
   }
 
-function flyToCol(entry) {
-    const lat = entry.geometry.coordinates[0][1];
-    const lng = entry.geometry.coordinates[0][0];
+function flyTo(entry, opt) {
+  let lat;
+  let lng;
+    if(opt == "col") {
+      lat = entry.geometry.coordinates[1][1];
+      lng = entry.geometry.coordinates[1][0];
+    } else {
+      lat = entry.geometry.coordinates[0][1];
+      lng = entry.geometry.coordinates[0][0];
+    }
+    
     //console.log(lat)
-    map.flyTo([lat, lng], 6, {
+    map.flyTo([lat, lng], 8, {
         duration: 2
     });
     setTimeout(() => {
@@ -134,32 +158,27 @@ function drawLine(entry) {
     
     var cor_s = [entry.geometry.coordinates[0][1], entry.geometry.coordinates[0][0]];
     var cor_e = [entry.geometry.coordinates[1][1], entry.geometry.coordinates[1][0]];
-    var latlngs = [
-        cor_s,
-        cor_e
-    ];
+    var latlngs = [ cor_s,cor_e ];
     //console.log(latlngs );
     
-    var polyline = L.polyline(latlngs, {color: '#404040'}).addTo(map);
+    var polyline = L.polyline(latlngs, {color: '#404040'})
+    var info = makePopupContent(entry);
+    polyline.bindPopup(info);
+    polyline.addTo(map);
     // zoom the map to the polyline
     map.fitBounds(polyline.getBounds());
-
-    polyline.on('click', function (e) {
+    polyline.openPopup();
+    polyline.on('click', function () {
         map.removeLayer(this);
     });
-
     
-        L.popup({closeButton: true, offset: L.point(0, -8)})
-        .setLatLng([lat, lng])
-        .setContent(makePopupContent(entry))
-        .openOn(map);
     
 }
 
-function onEachFeature(feature, layer) {
-    layer.bindPopup(makePopupContent(feature), 
-    { closeButton: false, offset: L.point(0, -8) });
-}
+// function onEachFeature(feature, layer) {
+//     layer.bindPopup(makePopupContent(feature), 
+//     { closeButton: false, offset: L.point(0, -8) });
+// }
 
 // const geoLayer = L.geoJSON(demolist, {
 //     onEachFeature: onEachFeature,
