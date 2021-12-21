@@ -27,18 +27,27 @@
     <div class="header_class" style="height: 10%; background-color: #ff6900; text-align: left; justify-content: space-between; display: flex; align-items: center;">
     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Logo_EPFL.svg/1280px-Logo_EPFL.svg.png" style="width: rem; height: 3rem; margin-left: 1rem;background-color: white;padding: 10px;">
     <h2 style="margin-top:1.2rem; color: white;">SWISS COLONIAL INVOLVEMENT</h2>
-    <button id="1" class="button button1" style="margin-right: 5%;" onclick="on_description()">Description</button>
+    <button id="1" class="despBu"  onclick="on_description() " >Description</button>
+    <div class="alllines">
+        <a href="#" onclick="showAll()" >Show All</a>
+        <br>
+        <a  href="#" onclick="clearMap()"> Clear&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+    </div>
     </div>
  
     <div class="map_container">
         
         <div class="entry-list">
+            <div class="dropdown">
+                <h4 style="margin-left: 5%"> Cities in Switzerland:   </h4>
+                 <select id="citiesDropdown" onchange="filterList()">
+                    <option>All</option>
+                  </select>
+            </div>
             <!--<div class="heading">
                 <h3>All Entries</h3>
             </div> -->
-            <select id="citiesDropdown" onchange="filterList()">
-                <option>All</option>
-              </select>
+            
             <ul class="list">
             </ul>
 
@@ -48,7 +57,7 @@
     
 
     <br/>
-    <script src="./example.js"></script>
+    <script src="./entries.js"></script>
     <script src="./app.js"></script>
 </body>
 
@@ -63,6 +72,6 @@
     function off() {
         document.getElementById("overlay").style.display = "none";
     }
-    
+
 </script>
 </html>

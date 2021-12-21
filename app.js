@@ -1,6 +1,6 @@
 
 // global view point
-const map = L.map('mapid').setView([30, -30],3);
+const map = L.map('mapid').setView([20, -20],3);
 const Esri_WorldStreetMap = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}', {
 	attribution: 'Tiles &copy; Esri &mdash; Source: Esri, DeLorme, NAVTEQ, USGS, Intermap, iPC, NRCAN, Esri Japan, METI, Esri China (Hong Kong), Esri (Thailand), TomTom, 2012'
 });
@@ -18,7 +18,8 @@ function generateMarker(){
         var marker_c = L.marker([latM_c,lngM_c]);
         var popup_c = marker_c.bindPopup(loc).openPopup();
 
-        marker_c.addTo(map);
+        marker_c.addTo(map).on('click', function(e) {
+          console.log(loc);});
     
         const latM_o = entry.geometry.coordinates[0][1];
         const lngM_o = entry.geometry.coordinates[0][0];
@@ -26,11 +27,36 @@ function generateMarker(){
         //console.log(ori);
         var marker_o = L.marker([latM_o,lngM_o]);
         var popup_o = marker_o.bindPopup(ori).openPopup();
-        marker_o.addTo(map);
+        marker_o.addTo(map).on('click', function(e) {
+          console.log(ori);});
       });
   }
 
 generateMarker();
+
+// function filterbyMarker(location) {
+//   // Variables
+//   let dropdown, ul, li, city, filter;
+//   dropdown = document.getElementById("citiesDropdown");
+//   ul = document.querySelector('.list');
+//   li = ul.getElementsByTagName("li");
+//   filter = dropdown.value;
+//   //console.log(li);
+//   //console.log('filter:' + filter);
+
+//   // Loops through rows and hides those with countries that don't match the filter
+//   for (i = 0; i < li.length; i++) { // `for...of` loops through the NodeList
+//     city = li[i].getElementsByTagName("h8")[0];
+//     //console.log(city);
+//     // if the filter is set to 'All', or this is the header row, or text matches filter
+//     if (filter === "All" || !city || (filter === city.textContent)) {
+//       li[i].style.display = ""; // shows this row
+//     }
+//     else {
+//       li[i].style.display = "none"; // hides this row
+//     }
+//   }
+// }
 
 function generateList() {
     const ul = document.querySelector('.list');
@@ -84,7 +110,6 @@ function generateList() {
       ul.appendChild(li);
 
     });
-    console.log(cityset);
     const dropdown = document.getElementById('citiesDropdown');
     cityset.forEach((city)=>{
       const option = document.createElement('option');
@@ -144,7 +169,6 @@ function generateList() {
   }
 
 function makePopupContent(entry) {
-  console.log(entry.properties);
     date = "";
     if(entry.properties.date !== null){
         date = "(" + entry.properties.date +")";
@@ -209,15 +233,32 @@ function drawLine(entry) {
     
 }
 
-// function onEachFeature(feature, layer) {
-//     layer.bindPopup(makePopupContent(feature), 
-//     { closeButton: false, offset: L.point(0, -8) });
-// }
+function onEachFeature(feature, layer) {
+    layer.bindPopup(makePopupContent(feature), 
+    { closeButton: false, offset: L.point(0, -8) });
+}
 
-// const geoLayer = L.geoJSON(demolist, {
-//     onEachFeature: onEachFeature,
-//     pointToLayer: function(feature, latlng) {
-//         return L.marker(latlng);
-//     }
-// });
-// geoLayer.addTo(map);
+
+
+function showAll(){
+  const geoLayer = L.geoJSON(demolist, {
+    onEachFeature: onEachFeature,
+    pointToLayer: function(feature, latlng) {
+        return L.marker(latlng);
+    }
+});
+geoLayer.addTo(map);
+  
+}
+function clearMap() {
+  for(i in map._layers) {
+      if(map._layers[i]._path != undefined) {
+          try {
+              map.removeLayer(map._layers[i]);
+          }
+          catch(e) {
+              console.log("problem with " + e + map._layers[i]);
+          }
+      }
+  }
+}

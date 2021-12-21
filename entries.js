@@ -25,30 +25,7 @@ const demolist = [
       ]
     }
   },
-  {
-    "type": "Feature",
-    "properties": {
-      "person": "Jamaica Kincaid",
-      "date": null,
-      "origin": "Geneva",
-      "colonial_location": "Antigua and Barbuda",
-      "activities": null,
-      "full_entry": "=> In her book A Small Place (1988), the Antiguan writer Jamaica Kincaid indicts the Antiguan government, the tourist industry and Antigua’s British colonial legacy by saying: "
-    },
-    "geometry": {
-      "type": "LineString",
-      "coordinates": [
-        [
-          6.14569,
-          46.20222
-        ],
-        [
-          -61.84329,
-          17.12096
-        ]
-      ]
-    }
-  },
+
   {
     "type": "Feature",
     "properties": {
