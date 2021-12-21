@@ -71,6 +71,7 @@ function generateList() {
       const col_loc = document.createElement('h8');
       const draw = document.createElement('button');
       const full = document.createElement('p');
+      const confi_lev = document.createElement('p');
       col_loc.addEventListener('click', () => {
         const opt = "col";
           flyTo(entry,opt);
@@ -98,7 +99,9 @@ function generateList() {
       col_loc.innerText = entry.properties.colonial_location;
       draw.innerText = "➠";
       full.innerText = entry.properties.full_entry;
-  
+      confi_lev.innerText = "confidence level placeholder";
+      confi_lev.className = "confidence";
+
       div.appendChild(a);
       div.appendChild(p);
       div.appendChild(ori);
@@ -106,6 +109,7 @@ function generateList() {
       div.appendChild(draw);
       div.appendChild(col_loc);
       div.appendChild(full);
+      div.appendChild(confi_lev);
       li.appendChild(div);
       ul.appendChild(li);
 
@@ -144,29 +148,7 @@ function generateList() {
     }
   }
   
-  function filterMarker() {
-    // Variables
-    let dropdown, ul, li, city, filter;
-    dropdown = document.getElementById("citiesDropdown");
-    ul = document.querySelector('.list');
-    li = ul.getElementsByTagName("li");
-    filter = dropdown.value;
-    //console.log(li);
-    //console.log('filter:' + filter);
-  
-    // Loops through rows and hides those with countries that don't match the filter
-    for (i = 0; i < li.length; i++) { // `for...of` loops through the NodeList
-      city = li[i].getElementsByTagName("h8")[0];
-      //console.log(city);
-      // if the filter is set to 'All', or this is the header row, or text matches filter
-      if (filter === "All" || !city || (filter === city.textContent)) {
-        li[i].style.display = ""; // shows this row
-      }
-      else {
-        li[i].style.display = "none"; // hides this row
-      }
-    }
-  }
+
 
 function makePopupContent(entry) {
     date = "";
@@ -178,7 +160,9 @@ function makePopupContent(entry) {
       activities = "";
       entry.properties.activities.forEach((a) =>{
           activities += a + ', ';
-      });}
+      });
+      activities = activities.substring(0, activities.length -2);
+    }
     return `
       <div>
           <h5>${entry.properties.person}${date}</h5>
