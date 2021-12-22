@@ -10,10 +10,10 @@ Our primary source is the [CARICOM Compilation Archive](https://louverture.ch/cc
  
 # Notebook organization:
 
-For retrieval of data from the primary source (CCA) :  `caricom-text-processing.ipynb` 
-For generation of geographical data : `caricom-enriching.ipynb` 
-For website formating of geographical data : `GeoJson.ipynb`
-For data analysis : `Data_Analysis.ipynb`
+For retrieval of data from the primary source (CCA) :  `caricom-text-processing.ipynb`   
+For generation of geographical data : `caricom-enriching.ipynb`   
+For website formating of geographical data : `GeoJson.ipynb`  
+For data analysis : `Data_Analysis.ipynb`  
 
 # Additional datasets : 
  - `geonamescaches` library  
