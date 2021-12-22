@@ -21,6 +21,8 @@ For data analysis : `Data_Analysis.ipynb`
 
 # Links
 [Website for Interactive Visualization](https://ych-wang.github.io/Colonial-heritage-in-Switzerland/)
+
+
 [Wikipage](http://fdh.epfl.ch/index.php/Switzerland_and_the_Transatlantic_Slavery#Introduction)
 
 
