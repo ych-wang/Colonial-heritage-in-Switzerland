@@ -10,7 +10,7 @@ Esri_WorldStreetMap.addTo(map);
 
 
 function generateMarker(){
-    demolist.forEach((entry) => {
+  entrylist.forEach((entry) => {
         const latM_c = entry.geometry.coordinates[1][1];
         const lngM_c = entry.geometry.coordinates[1][0];
         const loc = entry.properties.colonial_location;
@@ -61,7 +61,7 @@ generateMarker();
 function generateList() {
     const ul = document.querySelector('.list');
     const cityset = new Set();
-    demolist.forEach((entry) => {
+    entrylist.forEach((entry) => {
       /console.log(entry.properties);/
       const li = document.createElement('li');
       const div = document.createElement('div');
@@ -99,7 +99,7 @@ function generateList() {
       col_loc.innerText = entry.properties.colonial_location;
       draw.innerText = "➠";
       full.innerText = entry.properties.full_entry;
-      confi_lev.innerText = "confidence level placeholder";
+      confi_lev.innerText = "*Level of confidence: \nname: " + entry.properties.confidence_person + "%  |   date: "+ entry.properties.confidence_date + "%  |  origin: "+ entry.properties.confidence_origin + "%";
       confi_lev.className = "confidence";
 
       div.appendChild(a);
@@ -225,7 +225,7 @@ function onEachFeature(feature, layer) {
 
 
 function showAll(){
-  const geoLayer = L.geoJSON(demolist, {
+  const geoLayer = L.geoJSON(entrylist, {
     onEachFeature: onEachFeature,
     pointToLayer: function(feature, latlng) {
         return L.marker(latlng);
