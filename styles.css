@@ -83,7 +83,7 @@
   }
 
  #mapid {
-    height: 87vh;
+    height: 85vh;
     width: 70%;
     margin-left: 20px;
 }
@@ -111,7 +111,7 @@
 .entry-list {
     float: left;
     width: 30%;
-    height: 90vh;
+    height: 89vh;
     overflow: auto;
     background: whitesmoke;
 }
