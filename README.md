@@ -1,2 +1,2 @@
-# Colonial-heritage-in-Switzerland
+Leaflet.js visualization of the project. 
  
