@@ -5,7 +5,7 @@ In the last decade, the narrative that Switzerland has nothing to do with slave 
 Between the 16th and the 19th centuries, there were a number of Swiss involved in slavery, the slave trade, and colonialism activities. Swiss trading companies, banks, city-states, family enterprises, mercenary contractors, soldiers, and private individuals participated in and profited from the commercial, military, administrative, financial, scientific, ideological, and publishing activities necessary for the creation and the maintenance of the Transatlantic slavery economy. 
 
 In this project, focusing on the Caribbean Community(CARICOM) member states, we are interested in discovering the trace of the colonial past of Switzerland.
-Our primary source is the [CARICOM Compilation Archive](https://louverture.ch/cca/ CARICOM Compilation Archive) written by Hans Fässler, MA Zurich University, a historian from St.Gallen (Switzerland).
+Our primary source is the [CARICOM Compilation Archive](https://louverture.ch/cca/) written by Hans Fässler, MA Zurich University, a historian from St.Gallen (Switzerland).
 
  
 # Notebook organization:
